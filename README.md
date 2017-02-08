@@ -1,2 +1,1 @@
-# mlnd
-Machine Learning Nanodegree - Projects
+# Machine Learning Nanodegree - Projects
