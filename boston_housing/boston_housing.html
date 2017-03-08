@@ -13765,8 +13765,14 @@ WoL19IwxxgQN6+kZY4wJGtbTM8YYEzQs6RljjAkalvSMMcYEDUt6xhhjgoYlPWOMMUHDkp4xxpig
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>K-fold cross validation help us train/test the model with different subsets. This is better than creating only one partition (that could be biased). This way, as we train/test multiple times, we might find a subset of train/test data that lead us to a better model.</p>
+<p>K-fold cross validation is:</p>
+<ul>
+<li><strong>A cross validation method</strong>: we split the data in training/testing subsets. We use the training subset for training and, after that, we test the performance of the learned model with the testing subset. This is nice, because we can see how good the model can 'estimate' with data it have never seen before.</li>
+<li><strong>A 'k-fold' method</strong>: First the data set is divided into k (or almost) equal sized subsets. Then we cross validate it k times, selecting on of the subsets as testing set and the other k-1 as training set. At the end, we average the results of all k trials and get a single result.</li>
+</ul>
+<p>This is better than creating only one partition, a.k.a. 'holdout method' (that could be biased). This way, as we train/test multiple times, we might find a subset of train/test data that lead us to a better model. The variance of the resulting estimate is reduced as 'k' is increased. We might also notice the this prevent us of selecting a particular case of training/testing data sets that would lead us to a biased model.</p>
 <p>As we have seen before, cross validation is critical to evaluate the performance of a model. So, when running grid search to optimize a model, it is essential to use cross validation.</p>
+<p>There is always a trade off: as we run train/test k times, that means it is a slower method.</p>
 
 </div>
 </div>
